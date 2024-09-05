@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apakah kamu mau jadi cewe akuu?</title>
+  </head>
+
+  <body
+    style="
+      text-align: center;
+      margin-top: 250px;
+      height: 100%;
+      background: #c4dad2;
+    "
+  >
+    <h1 style="color: #16423c">cipaaaaa kamu mau ga cipaa jadi pacar akuu?</h1>
+    <form method="post">
+      <button
+        id="btn_mau"
+        name="btn_mau"
+        type="button"
+        style="
+          background-color: #6a9c89;
+          border: none;
+          color: #16423c;
+          border-radius: 8px;
+          width: 75px;
+          height: 30px;
+        "
+      >
+        <b>Mau...</b>
+      </button>
+      <button
+        id="btn_gamau"
+        onmouseover="gamau(this)"
+        style="
+          position: relative;
+          background-color: #6a9c89;
+          border: none;
+          color: #16423c;
+          border-radius: 8px;
+          width: 75px;
+          height: 30px;
+        "
+      >
+        <b>Gamau!</b>
+      </button>
+    </form>
+  </body>
+  <script>
+    document.getElementById("btn_mau").addEventListener("click", function () {
+      alert(
+        "SERIUSS CIPAA? ASLII BANGEETT? KALO GITUU AKU MINTA TOLONG KABARINN KE AKUU DONG LEWATT KIRIMINN AKU PAP MUKA KAMU SAMBIL LOVE LOVE TANGANNYAA :))"
+      );
+      window.location.href = "flower.html"; // Mengarahkan ke halaman flower.html
+    });
+
+    function gamau(id) {
+      var mau = document.getElementById("btn_mau");
+      var i = Math.floor(Math.random() * 300) + 1;
+      var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+      id.style.left = i + "px";
+      id.style.top = j + "px";
+    }
+  </script>
+</html>

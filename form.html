@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div
+      class="background"
+      style="
+        width: 25%;
+        height: 150px;
+        box-shadow: 0 4px 8px grey;
+        background-color: #d1e9f6;
+      "
+    >
+      <form id="registrationForm">
+        <label
+          for="name"
+          style="color: #674188; font-size: 20px; font-family: Trebuchet MS"
+          ><b
+            >Tapi sebelumnya kenalan dulu gaa sii, <br />
+            siapa namanyaa?</b
+          ></label
+        >
+        <br /><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          autofocus
+          autocomplete="off"
+          style="
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            border: none;
+            color: white;
+            font-family: Trebuchet MS;
+            color: #674188;
+          "
+        />
+        <br /><br />
+        <button
+          type="submit"
+          style="
+            width: 200px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: #9dbdff;
+            border: none;
+            box-shadow: 0 2px 4px white;
+            color: #674188;
+            font-size: 17px;
+            font-family: Trebuchet MS;
+          "
+        >
+          <b>Kirim</b>
+        </button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari reload halaman
+          const name = document.getElementById("name").value;
+
+          // Simpan data ke localStorage
+          localStorage.setItem("name", name);
+
+          // Arahkan ke halaman hasil
+          window.location.href = "home.html";
+        });
+    </script>
+  </body>
+</html>

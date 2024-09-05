@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Pendaftaran</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="longtext" style="color: #674188; width: 1000px">
+      <h2 style="margin-top: 0px">halloww <span id="displayName"></span></h2>
+      <p>
+        <strong
+          >selamat datang di website yang aku bikin khusus buat kamu !! aku
+          minta maaf karena websitenya nggaa sebagus ituu cipaaa :((
+          <br />
+          <p>
+            aku cuma mau curhat sedikittt tentang perasaan aku ke kamu aja sii
+            cipaa, tapi kayanya ga cukup kalo disini awokaowkaw
+          </p>
+        </strong>
+        <span id="displayName"></span>
+      </p>
+      <button style="border: 1px solid">
+        <a href="curhat.html" style="text-decoration: none"
+          >kamu kalo baca curhatan aku, pencet ini ajaa cipaa</a
+        >
+      </button>
+    </div>
+    <script>
+      document.getElementById("displayName").textContent =
+        localStorage.getItem("name");
+    </script>
+  </body>
+</html>
